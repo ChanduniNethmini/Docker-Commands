@@ -1,0 +1,20 @@
+# Docker-Commands
+- docker build -t <image-name> . 
+    * docker build -t my-node-app .
+- docker run -p 3000:3000 <image-name>
+    * docker run -p 3000:4000 my-node-app 
+Use tools like Postman to test the API endpoints by sending HTTP requests to http://localhost:4000 or the appropriate endpoint.
+Create a container Registry in azure
+
+## Push the Docker Image to Azure Container Registry:
+
+ - az acr login --name <registry-name>
+      * az acr login --name ApplicationMy
+ - docker tag <image-name> <acr-login-server>/<image-name>
+      * docker tag my-node-app applicationmy.azurecr.io/my-node-app
+ - docker push <acr-login-server>/<image-name>
+      * docker push applicationmy.azurecr.io/my-node-app
+
+
+
+
