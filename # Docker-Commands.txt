@@ -7,7 +7,7 @@ Use tools like Postman to test the API endpoints by sending HTTP requests to htt
 Create a container Registry in azure
 
 ## Push the Docker Image to Azure Container Registry:
-
+- az login
  - az acr login --name <registry-name>
       * az acr login --name ApplicationMy
  - docker tag <image-name> <acr-login-server>/<image-name>
